@@ -1,6 +1,11 @@
 	1.添加文件到Git仓库，分两步：
 		1）使用命令git add <file>，注意，可反复多次使用，添加多个文件；
-		2）使用命令git commit -m <message>，完成。
+		2）使用命令git commit -m <message>，message为修改的备注。
 	2.检查修改
 		要随时掌握工作区的状态，使用git status命令。
 		如果git status告诉你有文件被修改过，用git diff可以查看修改内容。
+	3.时光机 浏览更改历史版本
+		1）git log 显示之前的版本（git log --pretty=oneline可以简略显示）HEAD是当前版本。
+		2）git reflog可以显示历史修改。
+		3）git reset --hard HEAD^退回到上一个版本（^的个数决定回退几个版本，过多也可写成HEAD~xx,xx为回退的次数）
+			git reset --hard 990a4也可以像这样直接跟版本号，版本号越详细越准确。
