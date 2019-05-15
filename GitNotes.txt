@@ -13,4 +13,6 @@
 		https://www.liaoxuefeng.com/wiki/896043488029600/897271968352576
 		每一次 git add 都是将文件放到暂存区，当确定修改后才git commit将其添加到分支里，Git所管理的仅仅是修改。
 		git add 之后修改文件
-	5.
+	5.撤销修改
+		git checkout --file 将file的修改变回最近一次git commit 或 git add 状态，未放到暂存区的修改对应前面，暂存区的修改对应后面。
+	
