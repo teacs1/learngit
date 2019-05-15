@@ -14,5 +14,10 @@
 		每一次 git add 都是将文件放到暂存区，当确定修改后才git commit将其添加到分支里，Git所管理的仅仅是修改。
 		git add 之后修改文件
 	5.撤销修改
-		git checkout -- <file> 将file的修改变回最近一次git commit 或 git add 状态，未放到暂存区的修改对应前面，暂存区的修改对应后面。
+		git checkout -- <file> 将file的修改（删除）变回最近一次git commit 或 git add 状态，未放到暂存区的修改对应前面，暂存区的修改对应后面。
 		git reset HEAD <file> 可以将修改从暂存区直接撤回到工作区。
+	6.文件删除
+		rm <file> 用于删除文件，然后有两种选择(直接在工作区删除也可以)
+			1）从版本库中将其删除 git rm <file> 然后git commit -m"message";
+			2)误删，找回 git checkout -- <file>
+	
