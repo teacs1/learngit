@@ -1,5 +1,5 @@
 	1.添加文件到Git仓库，分两步：
-		1）使用命令git add filename，注意，可反复多次使用，添加多个文件；
+		1）使用命令git add <file>，注意，可反复多次使用，添加多个文件；
 		2）使用命令git commit -m"message"，message为修改的备注。
 	2.检查修改
 		要随时掌握工作区的状态，使用git status命令。
@@ -14,5 +14,5 @@
 		每一次 git add 都是将文件放到暂存区，当确定修改后才git commit将其添加到分支里，Git所管理的仅仅是修改。
 		git add 之后修改文件
 	5.撤销修改
-		git checkout --file 将file的修改变回最近一次git commit 或 git add 状态，未放到暂存区的修改对应前面，暂存区的修改对应后面。
-	
+		git checkout -- <file> 将file的修改变回最近一次git commit 或 git add 状态，未放到暂存区的修改对应前面，暂存区的修改对应后面。
+		git reset HEAD <file> 可以将修改从暂存区直接撤回到工作区。
